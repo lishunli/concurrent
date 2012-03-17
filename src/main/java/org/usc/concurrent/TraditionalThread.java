@@ -1,6 +1,7 @@
 package org.usc.concurrent;
 
 /**
+ * 传统的创建线程方法
  *
  * @author ShunLi
  */
@@ -72,8 +73,12 @@ public class TraditionalThread {
             }
         }.start();
 
-        // 这就是 override ，所以，执行的就是子类的方法，结果你应该知道了。
-        // output: thread :Thread-2
+        // 这就是 override ，所以，执行的就是子类的方法，结果你应该知道了。（无序，小心）
+        // output:
+        // 1:Thread-0
+        // 2:Thread-0
+        // thread :Thread-2
+        // 3:Thread-1
     }
 
 }
